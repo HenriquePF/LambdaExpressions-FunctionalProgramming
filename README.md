@@ -1,1 +1,2 @@
-# LambdaExpressions-FunctionalProgramming
+# Lambda Expressions and Functional Programming
+Examples/exercises.
