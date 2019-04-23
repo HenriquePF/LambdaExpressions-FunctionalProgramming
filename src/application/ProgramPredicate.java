@@ -2,8 +2,10 @@ package application;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
+
 import entities.ProductPredicate;
-import util.ProductPredicateUtil;
+
 
 public class ProgramPredicate {
 
@@ -16,7 +18,17 @@ public class ProgramPredicate {
 		list.add(new ProductPredicate("Tablet", 350.00));
 		list.add(new ProductPredicate("HD Case", 80.90));
 		
-		list.removeIf(new ProductPredicateUtil());
+		//First Implementation - Functional Interface
+	//	list.removeIf(new ProductPredicateUtil());
+		
+		
+		// Fourth Method - Variable Predicate
+	//	Predicate<ProductPredicate> pred = p -> p.getPrice() >= 100.0;
+	//	list.removeIf(pred);
+		
+		//Fith Method - Lambda Expression Inline
+		list.removeIf(p -> p.getPrice() >= 100.0);
+		
 		
 		for (ProductPredicate p : list) {
 			System.out.println(p);

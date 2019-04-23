@@ -1,14 +1,14 @@
 package entities;
 
-public class Product {
-	
+public class ProductReferenceNotStatic {
+
 	private String name;
 	private Double price;
 	
-	public Product() {
+	public ProductReferenceNotStatic() {
 	}
 
-	public Product(String name, Double price) {
+	public ProductReferenceNotStatic(String name, Double price) {
 		this.name = name;
 		this.price = price;
 	}
@@ -29,9 +29,15 @@ public class Product {
 		this.price = price;
 	}
 	
+	//Third - Method Reference NOT static
+	public boolean nonStaticProductPredicate() {
+		return price >= 100.0;
+	}
+
 	//toString generated automatically
 	@Override
 	public String toString() {
 		return "Product [Name= " + name + ", price= " + price + "]";
 	}	
 }
+
