@@ -1,14 +1,11 @@
 package entities;
 
-public class Product {
-	
+public class ProductPredicate {
+
 	private String name;
 	private Double price;
 	
-	public Product() {
-	}
-
-	public Product(String name, Double price) {
+	public ProductPredicate(String name, Double price) {
 		this.name = name;
 		this.price = price;
 	}
@@ -29,9 +26,10 @@ public class Product {
 		this.price = price;
 	}
 
-	//toString generated automatically
 	@Override
 	public String toString() {
-		return "Product [Name= " + name + ", price= " + price + "]";
-	}	
+		return "ProductPredicate [name=" + name + ", price=" + price + "]";
+	}
+	
+	
 }
